@@ -61,10 +61,12 @@
 	.el-table__header-wrapper, .el-table__fixed-header-wrapper {
 		th {
 			word-break: break-word;
-			background-color: #f8f8f9;
-			color: #515a6e;
-			height: 40px;
+			background-color: #F5F7FB;
+			color: #344054;
+			height: 44px;
 			font-size: 13px;
+			font-weight: 600;
+			border-bottom: 1px solid #E4E7EC;
 		}
 	}
 	.el-table__body-wrapper {
@@ -77,8 +79,8 @@
 /** 表单布局 **/
 .form-header {
     font-size:15px;
-	color:#6379bb;
-	border-bottom:1px solid #ddd;
+	color:#1A66FF;
+	border-bottom:1px solid #E4E7EC;
 	margin:8px 10px 25px 10px;
 	padding-bottom:5px
 }

@@ -5,7 +5,7 @@ import Element from 'element-ui'
 import './assets/styles/element-variables.scss'
 
 import '@/assets/styles/index.scss' // global css
-import '@/assets/styles/jingxuan.scss' // jingxuan cs s
+import '@/assets/styles/jingxuan.scss' // jingxuan css
 import App from './App'
 import permission from './directive/permission'
 import router from './router'
@@ -28,23 +28,13 @@ import {
 import axios from 'axios'
 import vSelectPage from 'v-selectpage'
 import VueAxios from "vue-axios"
-import './assets/icons'; // icon
-import './permission'; // permission control
-// 自定义表格工具扩展
+import './assets/icons' // icon
+import './permission' // permission control
 import RightToolbar from "@/components/RightToolbar"
-// 图片上传组件
 import ImageUpload from "@/components/ImageUpload"
-// 可编辑表格
 import VXETable from 'vxe-table'
 import XEUtils from 'xe-utils'
 import 'vxe-table/lib/style.css'
-// 
-import Router from 'vue-router'
-//引入移动端
-
-
-
-// 全局方法挂载
 Vue.prototype.$Utils = XEUtils
 Vue.prototype.getDicts = getDicts
 Vue.prototype.getConfigKey = getConfigKey
@@ -84,8 +74,7 @@ Vue.component('RightToolbar', RightToolbar)
 Vue.component('ImageUpload', ImageUpload)
 Vue.use(VXETable)
 Vue.use(VueAxios, axios)
-Vue.use(permission);
-Vue.use(Router);
+Vue.use(permission)
 Vue.use(vSelectPage, {
   // server side data loader
   dataLoad: async function (vue, data, params) {
@@ -101,26 +90,15 @@ Vue.use(vSelectPage, {
           .then(resp => resolve(resp), resp_1 => reject(resp_1))
       })
     } catch (error) {
-      // 请求失败处理
-      console.log('error', error)
+      console.error('v-selectpage load failed', error)
     }
   }
 })
 
-/**
- * If you don't want to use mock-server
- * you want to use MockJs for mock api
- * you can execute: mockXHR()
- *
- * Currently MockJs will be used in the production environment,
- * please remove it before going online! ! !
- */
-
 Vue.use(Element, {
-  size: Cookies.get('size') || 'medium' // set element-ui default size
+  size: Cookies.get('size') || 'medium'
 })
-//axios.defaults.timeout = 5000 // 请求超时
-//axios.defaults.baseURL = 'http://localhost:8080' + process.env.VUE_APP_BASE_API + '/'  // api 即上面 vue.config.js 中配置的地址
+
 Vue.config.productionTip = false
 
 new Vue({
