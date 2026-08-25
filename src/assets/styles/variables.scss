@@ -1,30 +1,34 @@
-// base color
-$blue:#324157;
-$light-blue:#3A71A8;
-$red:#C03639;
-$pink: #E65D6E;
-$green: #30B08F;
-$tiffany: #4AB7BD;
-$yellow:#FEC171;
-$panGreen: #30B08F;
+// brand palette — inspired by Vue Vben Admin layout language
+$blue:#1A66FF;
+$light-blue:#4C8DFF;
+$red:#F04438;
+$pink: #F97066;
+$green: #12B76A;
+$tiffany: #15B8A6;
+$yellow:#FDB022;
+$panGreen: #12B76A;
 
-// sidebar
-$menuText:#bfcbd9;
-$menuActiveText:#409EFF;
-$subMenuActiveText:#f4f4f5; // https://github.com/ElemeFE/element/issues/12951
+// sidebar (Vben-like deep navy)
+$menuText:#A3ADC2;
+$menuActiveText:#FFFFFF;
+$subMenuActiveText:#FFFFFF;
 
-$menuBg:#304156;
-$menuHover:#263445;
-$sidebarTitle: #ffffff;
+$menuBg:#0B1220;
+$menuHover:#151E32;
+$sidebarTitle: #FFFFFF;
 
 $menuLightBg:#ffffff;
-$menuLightHover:#f0f1f5;
-$sidebarLightTitle: #001529;
+$menuLightHover:#F0F5FF;
+$sidebarLightTitle: #0B1220;
 
-$subMenuBg:#1f2d3d;
-$subMenuHover:#001528;
+$subMenuBg:#070D18;
+$subMenuHover:#151E32;
 
-$sideBarWidth: 200px;
+$sideBarWidth: 220px;
+
+// surface
+$contentBg: #F5F7FB;
+$cardRadius: 10px;
 
 // the :export directive is the magic sauce for webpack
 // https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass

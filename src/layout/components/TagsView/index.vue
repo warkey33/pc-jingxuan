@@ -210,44 +210,51 @@ export default {
 
 <style lang="scss" scoped>
 .tags-view-container {
-  height: 34px;
+  height: 40px;
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #d8dce5;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 0 3px 0 rgba(0, 0, 0, .04);
+  background: #F8FAFC;
+  border-bottom: 1px solid #E4E7EC;
   .tags-view-wrapper {
     .tags-view-item {
       display: inline-block;
       position: relative;
       cursor: pointer;
-      height: 26px;
-      line-height: 26px;
-      border: 1px solid #d8dce5;
-      color: #495060;
-      background: #fff;
-      padding: 0 8px;
+      height: 28px;
+      line-height: 28px;
+      border: 1px solid transparent;
+      color: #475467;
+      background: transparent;
+      padding: 0 12px;
       font-size: 12px;
-      margin-left: 5px;
-      margin-top: 4px;
+      border-radius: 8px;
+      margin-left: 6px;
+      margin-top: 6px;
+      transition: all .2s ease;
       &:first-of-type {
-        margin-left: 15px;
+        margin-left: 14px;
       }
       &:last-of-type {
-        margin-right: 15px;
+        margin-right: 14px;
+      }
+      &:hover {
+        background: #EEF2FF;
+        color: #1A66FF;
       }
       &.active {
-        background-color: #42b983;
+        background-color: #1A66FF;
         color: #fff;
-        border-color: #42b983;
+        border-color: #1A66FF;
+        box-shadow: 0 6px 14px rgba(26, 102, 255, 0.25);
         &::before {
           content: '';
           background: #fff;
           display: inline-block;
-          width: 8px;
-          height: 8px;
+          width: 6px;
+          height: 6px;
           border-radius: 50%;
           position: relative;
-          margin-right: 2px;
+          margin-right: 6px;
+          vertical-align: 1px;
         }
       }
     }
@@ -258,18 +265,20 @@ export default {
     z-index: 3000;
     position: absolute;
     list-style-type: none;
-    padding: 5px 0;
-    border-radius: 4px;
+    padding: 6px 0;
+    border-radius: 10px;
     font-size: 12px;
     font-weight: 400;
-    color: #333;
-    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .3);
+    color: #344054;
+    border: 1px solid #E4E7EC;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
     li {
       margin: 0;
-      padding: 7px 16px;
+      padding: 8px 16px;
       cursor: pointer;
       &:hover {
-        background: #eee;
+        background: #F5F7FB;
+        color: #1A66FF;
       }
     }
   }

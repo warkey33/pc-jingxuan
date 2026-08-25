@@ -20,8 +20,9 @@
     left: 0;
     z-index: 1001;
     overflow: hidden;
-    -webkit-box-shadow: 2px 0 6px rgba(0,21,41,.35);
-    box-shadow: 2px 0 6px rgba(0,21,41,.35);
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    -webkit-box-shadow: 8px 0 24px rgba(11, 18, 32, .18);
+    box-shadow: 8px 0 24px rgba(11, 18, 32, .18);
 
     // reset element-ui css
     .horizontal-collapse-transition {
@@ -42,7 +43,7 @@
 
     &.has-logo {
       .el-scrollbar {
-        height: calc(100% - 50px);
+        height: calc(100% - 56px);
       }
     }
 
@@ -70,13 +71,24 @@
       overflow: hidden !important;
       text-overflow: ellipsis !important;
       white-space: nowrap !important;
+      height: 48px !important;
+      line-height: 48px !important;
+      margin: 4px 10px;
+      border-radius: 10px;
+      width: calc(100% - 20px) !important;
+    }
+
+    .el-menu-item.is-active {
+      background: linear-gradient(90deg, rgba(26, 102, 255, 0.95), rgba(76, 141, 255, 0.85)) !important;
+      color: #fff !important;
+      box-shadow: 0 8px 18px rgba(26, 102, 255, 0.28);
     }
 
     // menu hover
     .submenu-title-noDropdown,
     .el-submenu__title {
       &:hover {
-        background-color: rgba(0, 0, 0, 0.06) !important;
+        background-color: $menuHover !important;
       }
     }
 
@@ -86,19 +98,19 @@
 
     & .nest-menu .el-submenu>.el-submenu__title,
     & .el-submenu .el-menu-item {
-      min-width: $sideBarWidth !important;
+      min-width: calc(#{$sideBarWidth} - 20px) !important;
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.06) !important;
+        background-color: $menuHover !important;
       }
     }
 
     & .theme-dark .nest-menu .el-submenu>.el-submenu__title,
     & .theme-dark .el-submenu .el-menu-item {
-      background-color: $subMenuBg !important;
+      background-color: transparent !important;
 
       &:hover {
-        background-color: $subMenuHover !important;
+        background-color: $menuHover !important;
       }
     }
   }
